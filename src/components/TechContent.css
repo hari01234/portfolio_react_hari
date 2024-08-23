@@ -1,0 +1,123 @@
+.tech-content {
+    margin-top: 150px;
+}
+
+.tech-heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.tech-container {
+    margin-top: 40px;
+    padding: 0 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.tech-icon {
+    margin: 10px;
+    animation: float 3s linear infinite;
+}
+
+.tech-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border: 2px solid #1E2D3D;
+    background-color: transparent;
+    border-radius: 12px;
+}
+
+.tech-icon img {
+    width: 32px;
+    height: 32px;
+}
+
+.tech-icon-wrapper {
+    padding: 5px;
+    transition: all 0.2s;
+}
+
+.tech-icon-wrapper:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.tech-heading.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.tech-container.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .tech-content {
+        margin-top: 40px;
+    }
+
+    .tech-heading {
+        font-size: 20px;
+    }
+
+    .tech-icon {
+        width: 20px;
+        height: 20px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .tech-icon img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .tech-icon-wrapper {
+        padding: 0px;
+    }
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1224px) {
+    .tech-content {
+        margin-top: 70px;
+    }
+}
+
+
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {}
